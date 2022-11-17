@@ -39,12 +39,13 @@ class ListState extends State<ToDoApp> {
                       children: [
                         Expanded(
                             child: IconButton(
+                                color: Colors.black26,
                                 onPressed: () {
                                   showDialog(
                                       context: context,
                                       builder: (context) => SimpleDialog(
                                             contentPadding:
-                                                const EdgeInsets.all(20),
+                                                const EdgeInsets.all(05),
                                             children: [
                                               TextField(
                                                 onChanged: (value) {
@@ -60,6 +61,11 @@ class ListState extends State<ToDoApp> {
                                                     });
                                                     Navigator.pop(context);
                                                   },
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    primary: Colors
+                                                        .black, // Background color
+                                                  ),
                                                   child: const Text("Edit"))
                                             ],
                                           ));
@@ -99,8 +105,12 @@ class ListState extends State<ToDoApp> {
                               Navigator.of(context).pop();
                               todos.add(input.text);
                             });
+
                             input.clear();
                           },
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.black, // Background color
+                          ),
                           child: const Text("Add"),
                         ),
                       ],

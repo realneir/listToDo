@@ -1,12 +1,6 @@
 import '/toDoList.dart';
 import 'package:flutter/material.dart';
 
-// class Task {
-//   Task({required this.task});
-//   final String task;
-//   // bool status;
-// }
-
 void main() => runApp(const ToDoList());
 
 class ToDoList extends StatelessWidget {
